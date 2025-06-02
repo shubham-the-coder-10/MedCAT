@@ -71,7 +71,7 @@ class TransformersNER(object):
                 gradient_accumulation_steps=4, # We want to get to bs=4
                 do_eval=True,
                 # eval_strategy over evaluation_strategy since trf==4.46 (apperently)
-                evaluation_strategy='epoch', # type: ignore
+                eval_strategy='epoch', # type: ignore
                 logging_strategy='epoch', # type: ignore
                 save_strategy='epoch', # type: ignore
                 metric_for_best_model='eval_recall', # Can be changed if our preference is not recall but precision or f1
